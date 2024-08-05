@@ -1,0 +1,97 @@
+Description:
+I propose to develop a full-stack web application as my capstone project. This application will utilize the MERN stack (MongoDB, Express.js, React, Node.js) to deliver a seamless user experience through a well-designed front-end and a robust back-end.
+
+Stack:
+- Front-end: React
+- Back-end: Node.js, Express.js
+- Database: MongoDB
+- Additional Tools: GitHub for version control, Heroku for deployment, and Postman for API testing.
+
+Focus:
+The project will have an evenly balanced focus on both the front-end and the back-end development.
+
+Type:
+This project will be a website application.
+
+Goal:
+The goal of this project is to create a software program for the online coaching space to monitor coaches. It will make it easier for managers and owners of online coaching businesses to ensure their coaches provide good quality services to their clients.
+
+Users:
+The target demographic for this application includes managers and owners of online coaching businesses, their employees, and coaches who want to monitor performance and service quality.
+
+Data:
+The application will pull in data from coaches' CRM systems, specifically starting with HubSpot. It will also pull data from Trainerize to track client interactions with their coaches. Additionally, OpenAI's API will be used to analyze coaching calls, client feedback submissions, and more. Data will be collected through the application's UI and stored in a MongoDB database. API endpoints will be created for CRUD operations on these data points.
+
+Database Schema:
+The database will have the following entities:
+
+1. Users
+   - Fields: userId, fullName, email, password, role (e.g., owner, manager, coach), photo, team, tier, lastLogin, etc.
+3. Clients
+   - Fields: clientId, fullName, email, coachId, status, lastCheckInReview, lastStatusUpdate, activeDate, etc.
+4. Performance Metrics
+   - Fields: metricId, coachId, metricType (e.g., attendance, averageAttendanceTime), value, date, etc.
+5. Client Feedback
+   - Fields: feedbackId, clientId, coachId, feedbackContent, rating, submissionDate, surveyType, etc.
+6. Coaching Calls
+   - Fields: callId, coachId, clientId, recordingLink, transcriptLink, callDate, callLength, engagementStatus, engagementDescription, sentiment, sentimentDescription, zoomUUID, etc.
+7. Check-In Forms
+   - Fields: formId, coachId, clientId, submissionDate, submissionStatus, reviewed, videoShareLink, sentiment, responseDate, etc.
+9. Tags
+   - Fields: tagId, tagName, createdDate, modifiedDate, createdBy, etc.
+10. Messages
+    - Fields: messageId, createdDate, createdBy, content, relatedThread, senderType, sentTime, etc.
+11. Threads
+    - Fields: threadId, createdDate, createdBy, clientId, trainerizeThreadID, etc.
+12. Trainerize Activity
+    - Fields: activityId, coachId, clientId, activityDate, activityType, etc.
+13. Workout Program
+    - Fields: programId, clientId, coachId, name, startDate, endDate, status, trainerizeWorkoutID, etc.
+
+Security:
+The application will secure sensitive information such as clients' check-ins, feedback, conversations, and coaching calls. This will be achieved using encryption, secure authentication mechanisms, and role-based access control.
+
+Functionality:
+The application will include the following functionalities:
+- Clicking through pages
+- Viewing charts and graphs
+- Watching videos
+- Editing text and information
+- Sending messages
+
+User Flow:
+Users will be able to navigate between pages showing information related to different aspects of coaching and working with clients. This includes viewing performance metrics, client feedback, coaching call recordings, and more.
+
+Advanced Features:
+- Sending messages to clients on different pages.
+- Displaying data in easy-to-interpret graphs and charts.
+- Integrating AI for analyzing coaching calls, client feedback, and other aspects of the app.
+
+Breaking Down the Project:
+
+1. Determining the database schema
+   - Define models for users, coaches, clients, performance metrics, client feedback, coaching calls, check-in forms, tags, messages, threads, trainerize activity, and workout programs.
+2. Sourcing your data
+   - Integrate APIs from HubSpot and Trainerize to pull in relevant data.
+   - Use OpenAI's API to analyze coaching calls and client feedback.
+3. Determining user flow(s)
+   - Outline the user journey from signing up to monitoring coach performance and viewing reports.
+4. Setting up the backend and database
+   - Configure Node.js with Express.js and set up MongoDB.
+5. Setting up the frontend
+   - Develop the UI with React and connect it to the backend using API calls.
+6. User authentication
+   - Implement login and signup functionalities using JWT (JSON Web Tokens).
+7. Functionality to be included
+   - User profile creation and management.
+   - Coach performance monitoring.
+   - Client feedback collection.
+   - Service quality reporting.
+
+Stretch Goals:
+- Implement real-time notifications for new feedback and performance updates.
+- Add a search functionality to find specific coaches or reports.
+- Develop a mobile-friendly version of the application.
+
+GitHub Repository:
+The code and documentation for this project will be maintained in a GitHub repository, which will be shared with my mentor for review and feedback.
